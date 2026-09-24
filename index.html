@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bistro - Premium Menu</title>
+    <style>
+        /* Google Fonts मधून खास फॉन्ट्स इम्पोर्ट केले आहेत */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f; /* व्हिडिओप्रमाणे डार्क प्रीमियम बॅकग्राउंड */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid #d4af37; /* सोनेरी बॉर्डर */
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #d4af37; /* सोनेरी रंग */
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #aaaaaa;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #d4af37;
+            text-align: center;
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* कॅटेगरीच्या बाजूला डिझाईनसाठी लाईन्स */
+        .category-title::before, .category-title::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #333;
+            margin: 0 15px;
+        }
+
+        .menu-item {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid transparent;
+            /* पेज उघडल्यावर आयटम्स स्मूथली वर येण्यासाठी ॲनिमेशन */
+            animation: fadeIn 0.8s ease forwards; 
+        }
+
+        /* आयटमला स्पर्श केल्यावर (Hover) येणारा इफेक्ट */
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+        }
+
+        .item-desc {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .item-price {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #d4af37;
+            margin-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <!-- हॉटेलचे नाव आणि माहिती -->
+        <div class="header">
+            <h1>The Bistro</h1>
+            <p>Multi-Cuisine • Since 2015</p>
+        </div>
+
+        <!-- पहिली कॅटेगरी -->
+        <h2 class="category-title">Main Course</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <h3 class="item-title">Paneer Butter Masala</h3>
+                <p class="item-desc">Traditional rich tomato gravy with soft paneer cubes.</p>
+            </div>
+            <div class="item-price">₹450</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <h3 class="item-title">Mushroom Pepper Fry</h3>
+                <p class="item-desc">Fresh mushrooms sautéed with black pepper and spices.</p>
+            </div>
+            <div class="item-price">₹400</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <h3 class="item-title">Butter Naan</h3>
+                <p class="item-desc">Soft, fluffy tandoori bread brushed with fresh butter.</p>
+            </div>
+            <div class="item-price">₹150</div>
+        </div>
+
+        <!-- दुसरी कॅटेगरी -->
+        <h2 class="category-title">Desserts</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <h3 class="item-title">Vanilla Ice Cream</h3>
+                <p class="item-desc">Classic premium vanilla bean ice cream with chocolate syrup.</p>
+            </div>
+            <div class="item-price">₹250</div>
+        </div>
+    </div>
+
+</body>
+</html>
